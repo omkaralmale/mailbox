@@ -28,6 +28,7 @@ const Write = () => {
             sender: to,
             subject: subject,
             message: bodyText,
+            read: false,
           }),
           headers: {
             "Content-Type": "application/json",

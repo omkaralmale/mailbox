@@ -26,6 +26,7 @@ const Inbox = () => {
           sender: data[key].sender,
           subject: data[key].subject,
           message: data[key].message,
+          read: data[key].read,
         });
       }
       setArr(updatedData);
@@ -62,6 +63,11 @@ const Inbox = () => {
           <span>{item.message}</span>
         </div>
       </div>
+      <div>
+        <span style={{ fontWeight: "bold", color: "red" }}>
+          {item.read ? "Read" : "Unread"}
+        </span>
+      </div>
     </li>
   ));
   console.log(list.length);
@@ -69,7 +75,14 @@ const Inbox = () => {
   return (
     <div>
       <h2 style={{ textAlign: "center" }}>Inbox Emails</h2>
-      <ul style={{ listStyleType: "none", padding: 0 }}>{list}</ul>
+      <ul
+        style={{
+          listStyleType: "none",
+          width: "800px",
+        }}
+      >
+        {list}
+      </ul>
     </div>
   );
 };
