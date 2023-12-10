@@ -42,7 +42,7 @@ const LogInPage = () => {
           <LogInPageForm />
           <br />
           <span> Already an Account ? </span>
-          <Link to="/signup">LogIn</Link>
+          <Link to="/signup">Sign Up</Link>
           <br />
           <span> Forgot Password ? </span>
           <Link to="/forgot-password">forgot password</Link>

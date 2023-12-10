@@ -40,7 +40,7 @@ const LogInPageForm = () => {
       const data = await response.json();
       setMSG("");
       dispatch(login({ email: data.email, token: data.idToken }));
-      nav("/home");
+      nav("/home/inbox");
     } catch (error) {
       alert(error.message);
       setMSG("Failed to log in");
