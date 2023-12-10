@@ -1,8 +1,10 @@
 import { useRef, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
+import { useNavigate } from "react-router-dom";
 
 const SignUpPageForm = () => {
+  const navigate = useNavigate();
   const [errorMSG, setMSG] = useState("");
   const email = useRef("");
   const password = useRef("");
@@ -46,6 +48,7 @@ const SignUpPageForm = () => {
     confirmPassword.current.value = "";
     setMSG("");
     alert("SignUp Successful");
+    navigate("/login");
   };
   return (
     <Form onSubmit={handleSubmitForm}>
@@ -64,7 +67,7 @@ const SignUpPageForm = () => {
       </Form.Group>
       <span style={{ color: "red" }}>{errorMSG}</span>
       <br />
-      <Button variant="info" type="submit">
+      <Button variant="primary" type="submit">
         SignUp
       </Button>
     </Form>

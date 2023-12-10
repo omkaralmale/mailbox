@@ -17,13 +17,15 @@ const SignUpPage = () => {
         display: "flex",
         justifyContent: "center",
         marginTop: "50px",
+        fontFamily: "Quicksand",
       }}
     >
-      <Card style={{ width: "30rem" }}>
+      <Card style={{ width: "25rem" }}>
         <Card.Body>
           <Card.Title
             style={{
               fontSize: "28px",
+              fontFamily: "Quicksand",
               display: "flex",
               justifyContent: "center",
             }}
