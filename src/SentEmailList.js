@@ -37,6 +37,7 @@ const SentEmailList = () => {
   useEffect(() => {
     getInbox();
   }, [getInbox]);
+
   const list = arr.map((items) => {
     return (
       <EmailBody
