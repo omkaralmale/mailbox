@@ -18,7 +18,6 @@ import { open } from "./features/MailSlice";
 import { useNavigate } from "react-router-dom";
 
 const SideBar = () => {
-  const email = localStorage.getItem("email");
   const box = useSelector((state) => state.mail.box);
   const box1 = useSelector((state) => state.mail.box1);
 
