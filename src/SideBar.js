@@ -19,6 +19,7 @@ import { useNavigate } from "react-router-dom";
 
 const SideBar = () => {
   const box = useSelector((state) => state.mail.box);
+
   const box1 = useSelector((state) => state.mail.box1);
 
   const Nav = useNavigate();
