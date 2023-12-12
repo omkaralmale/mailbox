@@ -15,7 +15,8 @@ const LogInPage = () => {
     <div
       style={{
         display: "flex",
-        justifyContent: "center",
+        flex: "column",
+        justifyContent: "end",
         marginTop: "50px",
         fontFamily: "Quicksand",
       }}

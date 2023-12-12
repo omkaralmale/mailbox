@@ -1,0 +1,40 @@
+.header {
+  display: grid;
+  grid-template-columns: 250px auto 200px;
+  height: 50px;
+  align-items: center;
+  border-bottom: 1px solid whitesmoke;
+  padding: 10px;
+}
+.header__left {
+  display: flex;
+  align-items: center;
+}
+.header__middle {
+  display: flex;
+  align-items: center;
+  flex: 0.7;
+}
+.search_mail {
+  display: flex;
+  background-color: whitesmoke;
+  float: left;
+  flex: 0.7;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.search_mail input {
+  border: 0;
+  background: transparent;
+  outline: 0;
+  flex: 1;
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+.header__right {
+  display: flex;
+  align-items: center;
+}

@@ -2,8 +2,8 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import React, { useRef, useState } from "react";
 import { useDispatch } from "react-redux";
-import { login } from "../../Store/auth/AuthSlice";
 import { useNavigate } from "react-router-dom";
+import { login } from "../../features/auth/AuthSlice";
 
 const LogInPageForm = () => {
   const nav = useNavigate();
@@ -40,7 +40,7 @@ const LogInPageForm = () => {
       const data = await response.json();
       setMSG("");
       dispatch(login({ email: data.email, token: data.idToken }));
-      nav("/home/inbox");
+      nav("/mail");
     } catch (error) {
       alert(error.message);
       setMSG("Failed to log in");

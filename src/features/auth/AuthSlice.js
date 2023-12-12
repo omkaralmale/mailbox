@@ -11,7 +11,7 @@ const AuthSlice = createSlice({
   reducers: {
     login(state, actions) {
       state.token = actions.payload;
-      state.isLogIn = true;
+      state.isLogin = true;
       localStorage.setItem("token", actions.payload.token);
       localStorage.setItem("email", actions.payload.email);
       localStorage.setItem("isLogInLocal", "1");
@@ -19,9 +19,9 @@ const AuthSlice = createSlice({
     },
     logout(state) {
       state.token = "";
-      state.isLogIn = false;
-      localStorage.removeItem("token");
-      localStorage.removeItem("email");
+      state.isLogin = false;
+      localStorage.removeItem("idToken");
+      localStorage.removeItem("userEmail");
       localStorage.setItem("isLogInLocal", "0");
     },
   },
